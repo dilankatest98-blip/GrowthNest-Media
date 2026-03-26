@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrowthNest Media | Premium Graphic Design Portfolio</title>
+  <meta name="description" content="Premium graphic design portfolio for GrowthNest Media — social media design, social media management, real estate design, food branding, packaging design, and ad creatives for modern businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --panel: #111111;
+      --panel-2: #0f0f10;
+      --line: rgba(255,255,255,0.08);
+      --text: #f5f5f5;
+      --muted: #a1a1aa;
+      --primary: #d4af37;
+      --primary-soft: rgba(212,175,55,0.12);
+      --accent: #fbbf24;
+      --shadow: 0 20px 50px rgba(0,0,0,0.6);
+      --radius-xl: 24px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: #0b0b0c;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .section { padding: 88px 0; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 20px var(--gold);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(8,8,10,0.62);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #f5d76e, #d4af37);
+      color: #111;
+      font-weight: 800;
+      box-shadow: 0 10px 25px rgba(210,169,111,0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 600;
+      transition: 0.25s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f5d76e, #d4af37);
+      color: #111;
+      box-shadow: 0 14px 30px rgba(185,131,68,0.28);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: rgba(255,255,255,0.02);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero {
+      padding: 56px 0 70px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin: 18px 0 18px;
+    }
+
+    .headline span { color: var(--gold); }
+
+    .subtext {
+      color: var(--white-soft);
+      max-width: 640px;
+      font-size: clamp(16px, 2vw, 19px);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 640px;
+    }
+
+    .stat {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      box-shadow: var(--shadow);
+    }
+
+    .stat h3 {
+      margin: 0 0 6px;
+      font-size: 30px;
+      color: var(--gold);
+    }
+
+    .stat p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 32px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      box-shadow: var(--shadow);
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(135deg, rgba(210,169,111,0.45), transparent 30%, transparent 70%, rgba(255,255,255,0.12));
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #101013;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .mockup-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .mockup-dots { display: flex; gap: 8px; }
+    .mockup-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.22);
+    }
+
+    .showcase {
+      padding: 24px;
+      display: grid;
+      gap: 16px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(210,169,111,0.12), transparent 30%),
+        linear-gradient(180deg, #141419, #0f1014);
+    }
+
+    .showcase-main {
+      border-radius: 22px;
+      padding: 30px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80') center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .showcase-main::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.72));
+    }
+
+    .showcase-main > * { position: relative; z-index: 1; }
+
+    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+    .pill {
+      padding: 8px 12px;
+      font-size: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: #fff;
+    }
+
+    .showcase-main h3 { margin: 0; font-size: 30px; }
+    .showcase-main p { margin: 10px 0 0; color: rgba(255,255,255,0.8); line-height: 1.7; }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .mini-card {
+      border-radius: 18px;
+      min-height: 165px;
+      padding: 18px;
+      display: flex;
+      align-items: flex-end;
+      border: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mini-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.78));
+    }
+
+    .mini-card h4 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .section-title {
+      margin: 18px 0 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .section-copy {
+      color: var(--white-soft);
+      max-width: 720px;
+      line-height: 1.9;
+      font-size: 17px;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .testimonials-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .services-grid { grid-template-columns: repeat(4, 1fr); margin-top: 32px; }
+    .projects-grid { grid-template-columns: repeat(3, 1fr); margin-top: 32px; }
+    .testimonials-grid { grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .service-card {
+      padding: 26px;
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover,
+    .project-card:hover,
+    .pricing-card:hover,
+    .testimonial:hover {
+      transform: translateY(-6px);
+      border-color: rgba(210,169,111,0.35);
+    }
+
+    .icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--gold-soft);
+      color: var(--gold);
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3,
+    .project-card h3,
+    .pricing-card h3,
+    .testimonial h3 { margin: 0 0 10px; }
+
+    .service-card p,
+    .project-card p,
+    .pricing-card p,
+    .testimonial p,
+    .about-text p,
+    .contact-copy p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 32px;
+    }
+
+    .about-visual {
+      min-height: 520px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.65)),
+        url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80') center/cover;
+      border-radius: 34px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .signature-card {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      right: 24px;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(10,10,12,0.75);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .about-text {
+      padding: 34px;
+    }
+
+    .about-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .about-item {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .about-item strong { display: block; margin-bottom: 4px; }
+
+    .project-card {
+      overflow: hidden;
+      transition: 0.25s ease;
+    }
+
+    .project-thumb {
+      aspect-ratio: 4 / 3;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .project-thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.32));
+    }
+
+    .project-body { padding: 22px; }
+    .project-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .project-tag {
+      font-size: 12px;
+      color: var(--gold);
+      background: var(--gold-soft);
+      border: 1px solid rgba(210,169,111,0.18);
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+
+    .pricing-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .pricing-card {
+      padding: 28px;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(210,169,111,0.36);
+      background: linear-gradient(180deg, rgba(210,169,111,0.12), rgba(255,255,255,0.04));
+    }
+
+    .badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: rgba(210,169,111,0.18);
+      color: var(--gold);
+      border: 1px solid rgba(210,169,111,0.25);
+    }
+
+    .price {
+      font-size: 48px;
+      font-weight: 800;
+      margin: 10px 0 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .price span {
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0 28px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--white-soft);
+      line-height: 1.7;
+    }
+
+    .feature::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    .testimonial {
+      padding: 24px;
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 0.14em;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .client {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--white-soft);
+      font-size: 14px;
+    }
+
+    .contact-card {
+      margin-top: 32px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(210,169,111,0.14), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    footer {
+      padding: 28px 0 50px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: var(--text);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1080px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid,
+      .testimonials-grid,
+      .pricing-wrap,
+      .hero-grid,
+      .about-grid,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+      .contact-actions { justify-content: flex-start; }
+      .about-visual { min-height: 420px; }
+    }
+
+    @media (max-width: 820px) {
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 16px;
+        right: 16px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 22px;
+        background: rgba(10,10,12,0.95);
+        border: 1px solid rgba(255,255,255,0.08);
+      }
+      .nav-links.open { display: flex; }
+      .mobile-toggle { display: block; }
+      .desktop-cta { display: none; }
+      .stats { grid-template-columns: 1fr; }
+      .headline { font-size: clamp(40px, 12vw, 64px); }
+      .section { padding: 70px 0; }
+      .showcase-grid { grid-template-columns: 1fr; }
+      .projects-grid,
+      .services-grid,
+      .testimonials-grid,
+      .pricing-wrap { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <span class="brand-mark">V</span>
+        <span>GrowthNest Media</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a class="btn btn-primary desktop-cta" href="#contact">Book a Project</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Premium Graphic Design Portfolio</span>
+          <h1 class="headline">I design <span>premium visuals</span> that make brands look expensive, modern, and unforgettable.</h1>
+          <p class="subtext">
+            I'm GrowthNest Media — a creative brand helping businesses grow with premium social media design, social media management, real estate marketing visuals, food branding, packaging design, and ad creatives that attract attention, build trust, and strengthen online presence.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Work</a>
+            <a class="btn btn-secondary" href="#pricing">See Packages</a>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <h3>4 Core Niches</h3>
+              <p>Focused on social media design, social media management, real estate marketing, food branding, and packaging design.</p>
+            </div>
+            <div class="stat">
+              <h3>Fast Delivery</h3>
+              <p>Professional workflow with clear communication, revisions, and polished final files.</p>
+            </div>
+            <div class="stat">
+              <h3>Client-Focused</h3>
+              <p>Designs created to help brands look better, feel more premium, and convert more viewers into buyers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <div class="mockup-top">
+              <div class="mockup-dots"><span></span><span></span><span></span></div>
+              <span>Selected Work Preview</span>
+            </div>
+            <div class="showcase">
+              <div class="showcase-main">
+                <div class="pill-row">
+                  <span class="pill">Social Media Design</span>
+                  <span class="pill">Social Media Management</span>
+                  <span class="pill">Brand Identity</span>
+                  <span class="pill">Packaging</span>
+                </div>
+                <h3>Clean design. Premium feel. Better brand perception.</h3>
+                <p>Designed for food brands, ecommerce, real estate, and modern businesses that need visuals with impact.</p>
+              </div>
+              <div class="showcase-grid">
+                <div class="mini-card" style="background-image:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80');">
+                  <h4>Luxury Social Posts</h4>
+                </div>
+                <div class="mini-card" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80');">
+                  <h4>Food Brand Visuals</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <span class="eyebrow">About Me</span>
+        <h2 class="section-title">A designer focused on visuals that help brands stand out.</h2>
+        <p class="section-copy">
+          I create polished, modern, and conversion-aware design systems for businesses that want a stronger online presence. My work combines clean layout, premium styling, and strategic communication so every design looks intentional — not generic.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="signature-card">
+              <strong style="font-size:18px;display:block;margin-bottom:8px;">GrowthNest Media</strong>
+              <span style="color:var(--muted);line-height:1.7;">Creative studio for social media design, social media management, brand visuals, packaging, and ad creatives.</span>
+            </div>
+          </div>
+          <div class="card about-text">
+            <h3 style="margin-top:0;font-size:28px;">What I help clients with</h3>
+            <p>
+              I work with businesses that need design that feels more premium, more trustworthy, and more effective. Whether it's a product brand, real estate business, restaurant, or ecommerce store, I create visuals and content systems that support sales, engagement, and stronger brand perception.
+            </p>
+            <div class="about-list">
+              <div class="about-item">
+                <div>✦</div>
+                <div>
+                  <strong>Social Media Design</strong>
+                  Custom posts, carousels, promotional banners, and branded content for Instagram and Facebook.
+                </div>
+              </div>
+              <div class="about-item">
+                <div>✦</div>
+                <div>
+                  <strong>Social Media Management</strong>
+                  Content planning, posting support, monthly creative direction, and consistent brand presence across platforms.
+                </div>
+              </div>
+              <div class="about-item">
+                <div>✦</div>
+                <div>
+                  <strong>Brand & Packaging Design</strong>
+                  Premium-looking visual systems and packaging concepts for food, ecommerce, and retail businesses.
+                </div>
+              </div>
+              <div class="about-item">
+                <div>✦</div>
+                <div>
+                  <strong>Ad Creatives</strong>
+                  Scroll-stopping ad graphics built to communicate offers clearly and attract clicks.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h2 class="section-title">Social Media, Management, Real Estate & Food Brand Services</h2>
+        <p class="section-copy">
+          I specialize in social media design, social media management, real estate marketing visuals, food branding, and packaging design — helping businesses look modern, premium, active, and high-converting online.
+        </p>
+
+        <div class="services-grid">
+          <article class="card service-card">
+            <div class="icon-box">✦</div>
+            <h3>Social Media Design</h3>
+            <p>Premium Instagram and Facebook post designs built to increase attention, engagement, and brand consistency.</p>
+          </article>
+          <article class="card service-card">
+            <div class="icon-box">◉</div>
+            <h3>Social Media Management</h3>
+            <p>Monthly content support for brands that need planning, post direction, creative consistency, and stronger online presence.</p>
+          </article>
+          <article class="card service-card">
+            <div class="icon-box">⌂</div>
+            <h3>Real Estate Design</h3>
+            <p>Luxury property posts, listing promotions, agent branding, and real estate ad creatives with a high-end look.</p>
+          </article>
+          <article class="card service-card">
+            <div class="icon-box">◔</div>
+            <h3>Food Branding</h3>
+            <p>Modern visual identity, promo graphics, and brand presentation for food businesses and ecommerce products.</p>
+          </article>
+          <article class="card service-card">
+            <div class="icon-box">▣</div>
+            <h3>Packaging Design</h3>
+            <p>Premium packaging concepts for pouches, labels, and product lines that need shelf appeal and trust.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <span class="eyebrow">Selected Projects</span>
+        <h2 class="section-title">Portfolio pieces that show range and premium style.</h2>
+        <p class="section-copy">
+          These sample project directions are designed to show how I approach different industries with a clean, elevated visual style.
+        </p>
+
+        <div class="projects-grid">
+          <article class="card project-card">
+            <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag">Real Estate</span>
+                <span class="project-tag">Luxury Posts</span>
+              </div>
+              <h3>Luxury Property Marketing Set</h3>
+              <p>Premium listing graphics and branded content created to help agents and property businesses look more professional online.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag">Food Branding</span>
+                <span class="project-tag">Premium Visuals</span>
+              </div>
+              <h3>Food Brand Launch Visuals</h3>
+              <p>Clean, modern brand presentation and promotional graphics designed for food products and premium ecommerce stores.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag">Social Media</span>
+                <span class="project-tag">Content Design</span>
+              </div>
+              <h3>Instagram Content System</h3>
+              <p>Consistent carousel and post design system built to strengthen branding and improve audience engagement.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag">Advertising</span>
+                <span class="project-tag">Conversion</span>
+              </div>
+              <h3>High-Converting Ad Creatives</h3>
+              <p>Modern ad graphics created to highlight offers, showcase products, and generate stronger click-through results.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag">Branding</span>
+                <span class="project-tag">Agency Style</span>
+              </div>
+              <h3>Modern Brand Identity Direction</h3>
+              <p>Visual styling systems for brands that need a cleaner, more elevated identity across all platforms.</p>
+            </div>
+          </article>
+          <article class="card project-card">
+            <div class="project-thumb" style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag">Packaging</span>
+                <span class="project-tag">Product Design</span>
+              </div>
+              <h3>Packaging & Product Presentation</h3>
+              <p>Premium packaging directions for pouches, labels, and consumer products designed to stand out on shelves and online.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <span class="eyebrow">Pricing</span>
+        <h2 class="section-title">Simple packages to start working together.</h2>
+        <p class="section-copy">
+          These starter packages are designed for freelancers growing their client base. You can easily change the pricing, deliverables, and features later.
+        </p>
+
+        <div class="pricing-wrap">
+          <article class="card pricing-card">
+            <h3>Starter</h3>
+            <div class="price">$25 <span>/ design</span></div>
+            <p>Perfect for one premium post, flyer, or branded promotional visual.</p>
+            <div class="feature-list">
+              <div class="feature">1 custom design</div>
+              <div class="feature">Professional export files</div>
+              <div class="feature">1 revision included</div>
+            </div>
+            <a class="btn btn-secondary" href="#contact">Start a Project</a>
+          </article>
+
+          <article class="card pricing-card featured">
+            <span class="badge">Best for Clients</span>
+            <h3>Growth Package</h3>
+            <div class="price">$120 <span>/ 5 designs</span></div>
+            <p>Ideal for brands that need consistent content and a premium visual look across platforms.</p>
+            <div class="feature-list">
+              <div class="feature">5 premium branded designs</div>
+              <div class="feature">Consistent visual style</div>
+              <div class="feature">2 revisions included</div>
+            </div>
+            <a class="btn btn-primary" href="#contact">Choose Growth</a>
+          </article>
+
+          <article class="card pricing-card">
+            <h3>Monthly Support</h3>
+            <div class="price">$300 <span>/ month</span></div>
+            <p>Ongoing support for businesses that need regular design content and social media management every month.</p>
+            <div class="feature-list">
+              <div class="feature">15 monthly design posts</div>
+              <div class="feature">Content planning support</div>
+              <div class="feature">Priority communication</div>
+              <div class="feature">Creative direction support</div>
+            </div>
+            <a class="btn btn-secondary" href="#contact">Book Monthly</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Testimonials</span>
+        <h2 class="section-title">Designed to build trust even before your first reviews.</h2>
+        <p class="section-copy">
+          Until you collect real client testimonials, these can be replaced with project outcomes, feedback screenshots, or short case-study notes.
+        </p>
+
+        <div class="testimonials-grid">
+          <article class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <p>“The designs looked clean, premium, and far more professional than what we were posting before.”</p>
+            <div class="client">Sample feedback block — replace with a real client quote later.</div>
+          </article>
+          <article class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <p>“Exactly the kind of polished visual style we needed for our food brand launch.”</p>
+            <div class="client">Use this area for client name, business, or project type.</div>
+          </article>
+          <article class="card testimonial">
+            <div class="stars">★★★★★</div>
+            <p>“Fast communication, strong design sense, and a premium finish across every deliverable.”</p>
+            <div class="client">Swap this with real proof once you complete your first few projects.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title">Let’s build visuals that make your brand look better.</h2>
+        <p class="section-copy">
+          Need premium creative support for your business? Message GrowthNest Media for social media design, social media management, real estate visuals, food branding, packaging design, and ad creatives. I also offer a free sample concept for serious clients.
+        </p>
+
+        <div class="card contact-card">
+          <div class="contact-copy">
+            <h3 style="margin:0 0 10px;font-size:28px;">Let’s grow your brand with premium design</h3>
+            <p>WhatsApp: +94 75 245 9065<br>Email: dilankatest98@gmail.com<br>Instagram: @mediagrowthnest<br><br><strong>Free Sample Offer:</strong> Serious clients can request one sample concept before starting a full package.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:dilankatest98@gmail.com">Email Me</a>
+            <a class="btn btn-secondary" href="https://wa.me/94752459065" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-secondary" href="https://instagram.com/mediagrowthnest" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-line" style="justify-content:center;text-align:center;">
+      <span>© 2026 GrowthNest Media. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.textContent = '☰';
+      });
+    });
+  </script>
+
+
+<!-- 🔥 LEAD CAPTURE POPUP -->
+<div id="popup" style="position:fixed;bottom:20px;right:20px;background:#111;border:1px solid rgba(255,255,255,0.1);padding:20px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.5);max-width:300px;z-index:999;">
+  <h4 style="margin:0 0 8px;color:#d4af37;">🎁 Free Design Sample</h4>
+  <p style="font-size:14px;color:#ccc;margin-bottom:12px;">Get 1 FREE sample design or content concept before ordering.</p>
+  <a href="https://wa.me/94752459065" target="_blank" class="btn btn-primary" style="width:100%;">Request Now</a>
+</div>
+
+<!-- 🔥 INSTAGRAM SECTION -->
+<section class="section">
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title">Follow @mediagrowthnest</h2>
+    <p class="section-copy">See latest designs, reels, and client work.</p>
+    <a href="https://instagram.com/mediagrowthnest" target="_blank" class="btn btn-primary">Visit Instagram</a>
+  </div>
+</section>
+
+<!-- 🔥 SIMPLE CONTACT FORM -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Quick Inquiry</h2>
+    <form onsubmit="sendToWhatsApp(event)" style="display:grid;gap:12px;max-width:500px;">
+      <input type="text" id="name" placeholder="Your Name" required style="padding:12px;border-radius:10px;border:none;">
+      <input type="text" id="service" placeholder="What service do you need?" required style="padding:12px;border-radius:10px;border:none;">
+      <button class="btn btn-primary">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function sendToWhatsApp(e){
+ e.preventDefault();
+ let name=document.getElementById('name').value;
+ let service=document.getElementById('service').value;
+ let msg=`Hi, I'm ${name}. I need: ${service}`;
+ window.open(`https://wa.me/94752459065?text=${encodeURIComponent(msg)}`,'_blank');
+}
+</script>
+
+</body>
+</html>
